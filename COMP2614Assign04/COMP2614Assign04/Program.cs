@@ -13,8 +13,21 @@ namespace COMP2614Assign04
         static void Main(string[] args)
         {
             Console.Title = "COMP2614 Assignment 04 A00838629";
-      
-            string[] readLinesArray = File.ReadAllLines("...\\...\\groceries.csv"); 
+
+            string path = @"...\\...\\groceries.csv";
+
+            if (!File.Exists(path))
+            {          
+                Console.WriteLine("File does not exist.");
+            }
+
+            if (path == null)
+            {
+                Console.WriteLine("Agrument not found.");
+            }
+
+            string[] readLinesArray = File.ReadAllLines(path); 
+
             decimal totalPrice = 0;
 
             GroceryItemCollection groceryItems = new GroceryItemCollection();
@@ -49,8 +62,9 @@ namespace COMP2614Assign04
         }
 
         /// <summary>
-        /// Used to handle 'Index out of bounds' Exception
+        /// Used to handle 'Index out of bounds 
         /// Checks  to see if the array defaulted value, has a value. If not, return to type null
+
         /// </summary>
         /// <param name="items"></param>
         /// <param name="index"></param>
