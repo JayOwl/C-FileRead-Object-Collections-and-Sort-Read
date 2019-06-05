@@ -23,7 +23,7 @@ namespace COMP2614Assign04
 
             if (path == null)
             {
-                Console.WriteLine("Agrument not found.");
+                Console.WriteLine("File Path not found.");
             }
 
             string[] readLinesArray = File.ReadAllLines(path); 
@@ -47,6 +47,7 @@ namespace COMP2614Assign04
             Console.WriteLine($"{"Grocery Item",-20} {"Price",20:N2}   {"Expires",-15}");
             Console.WriteLine(new string('-', 60));
             ConsolePrinter.PrintGroceryCollection(groceryItems, "");
+            Console.WriteLine(new string('-', 60));
             Console.WriteLine($"{"Total:",-20} {totalPrice,20}");
             Console.WriteLine("\n");
 
@@ -58,7 +59,6 @@ namespace COMP2614Assign04
             ConsolePrinter.PrintGroceryCollection(groceryItems, "");
             Console.WriteLine(new string('-', 60));
             Console.WriteLine($"{"Total:",-20} {totalPrice,20}");   
-
         }
 
         /// <summary>

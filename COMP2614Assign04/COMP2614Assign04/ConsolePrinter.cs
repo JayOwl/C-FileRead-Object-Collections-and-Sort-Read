@@ -15,6 +15,7 @@ namespace COMP2614Assign04
                 DateTime dateTimeExpiry = grocery.ExpriationDate;
                 string stringDateTime;
                 stringDateTime = Convert.ToString(dateTimeExpiry);
+
                 if (grocery.ExpriationDate == DateTime.MinValue)
                 {
                     stringDateTime = "<Never>";
@@ -23,6 +24,7 @@ namespace COMP2614Assign04
                 {
                     stringDateTime = dateTimeExpiry.ToString("ddd") + " " + dateTimeExpiry.ToString("MMM dd, yyyy");
                 }
+
                 Console.WriteLine($"{grocery.Description, -20} {grocery.Price, 20:N2}   {stringDateTime,-15}");      
             }      
         }

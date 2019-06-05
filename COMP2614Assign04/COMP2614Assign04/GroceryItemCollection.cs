@@ -14,6 +14,5 @@ namespace COMP2614Assign04
             get { return totalPrice; }
             set { totalPrice = value; }
         }
-
     }  
 }
